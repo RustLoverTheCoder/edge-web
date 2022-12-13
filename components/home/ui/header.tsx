@@ -4,11 +4,12 @@ import React, { memo } from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link';
 
 const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Company', href: '#' },
 ]
 
@@ -19,10 +20,10 @@ const Header = () => {
         <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6" aria-label="Global">
           <div className="flex flex-1 items-center">
             <div className="flex w-full items-center justify-between md:w-auto">
-              <a href="#">
+              <Link href="#">
                 <span className="sr-only">Workflow</span>
                 <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="" />
-              </a>
+              </Link>
               <div className="-mr-2 flex items-center md:hidden">
                 <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -32,19 +33,19 @@ const Header = () => {
             </div>
             <div className="hidden space-x-8 md:ml-10 md:flex">
               {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
+                <Link key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <a href="#" className="text-base font-medium text-white hover:text-gray-300">
+            <Link href="#" className="text-base font-medium text-white hover:text-gray-300">
               Log in
-            </a>
-            <a href="#" className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700">
+            </Link>
+            <Link href="#" className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700">
               Start free trial
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
@@ -74,22 +75,22 @@ const Header = () => {
             <div className="pt-5 pb-6">
               <div className="space-y-1 px-2">
                 {navigation.map((item) => (
-                  <a key={item.name} href={item.href} className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">
+                  <Link key={item.name} href={item.href} className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="mt-6 px-5">
-                <a href="#" className="block w-full rounded-md bg-indigo-600 py-3 px-4 text-center font-medium text-white shadow hover:bg-indigo-700">
+                <Link href="#" className="block w-full rounded-md bg-indigo-600 py-3 px-4 text-center font-medium text-white shadow hover:bg-indigo-700">
                   Start free trial
-                </a>
+                </Link>
               </div>
               <div className="mt-6 px-5">
                 <p className="text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-gray-900 hover:underline">
+                  <Link href="#" className="text-gray-900 hover:underline">
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import Link from 'next/link'
 
 const navigation = {
   solutions: [
@@ -105,9 +106,9 @@ const Footer = () => {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <Link href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -117,9 +118,9 @@ const Footer = () => {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <Link href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -131,9 +132,9 @@ const Footer = () => {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <Link href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -143,9 +144,9 @@ const Footer = () => {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <Link href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -182,10 +183,10 @@ const Footer = () => {
         <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+              <Link key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
+              </Link>
             ))}
           </div>
           <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2020 Workflow, Inc. All rights reserved.</p>
