@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Navigation, Prose } from 'components/docs'
+import Header from 'components/pricing/header'
 
 const navigation = [
   {
@@ -61,7 +62,7 @@ const navigation = [
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div>213</div>
+      <Header />
       {children}
     </>
   )
