@@ -4,14 +4,8 @@ import React, { memo } from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link';
-
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Docs', href: '/docs' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Company', href: '#' },
-]
+import Link from 'next/link'
+import { navigation } from 'config'
 
 const Header = () => {
   return (
