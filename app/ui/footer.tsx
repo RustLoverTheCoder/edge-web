@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const navigation = {
   solutions: [
@@ -195,4 +195,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default memo(Footer)

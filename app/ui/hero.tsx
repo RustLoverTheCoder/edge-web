@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
 const Hero = () => {
@@ -65,4 +65,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default memo(Hero)

@@ -1,4 +1,4 @@
-import { Header, Hero, Footer } from './ui'
+import { Header, Hero, Footer, PrimaryFeatures } from './ui'
 
 export default function Home() {
   return (
@@ -6,7 +6,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-      </main>
+        <PrimaryFeatures />
+      </main> 
       <Footer />
     </div>
   )

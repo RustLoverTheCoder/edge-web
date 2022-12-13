@@ -1,4 +1,6 @@
 import Header from './header'
 import Hero from './hero'
 import Footer from './footer'
-export { Header, Hero, Footer }
+import PrimaryFeatures from './primaryFeatures'
+
+export { Header, Hero, Footer, PrimaryFeatures }
