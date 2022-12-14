@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { memo } from 'react'
 
 const Prose = ({ as: Component = 'div', className, ...props }: any) => {
   return (
@@ -24,4 +25,4 @@ const Prose = ({ as: Component = 'div', className, ...props }: any) => {
   )
 }
 
-export default Prose
+export default memo(Prose)

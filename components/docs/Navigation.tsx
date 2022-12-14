@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
 import { Navigation } from './type'
+import { memo } from 'react'
 
 const Navigation = ({ navigation, className }: { navigation: Array<Navigation>; className?: string }) => {
   let router = useRouter()
@@ -38,4 +39,4 @@ const Navigation = ({ navigation, className }: { navigation: Array<Navigation>; 
   )
 }
 
-export default Navigation
+export default memo(Navigation)
