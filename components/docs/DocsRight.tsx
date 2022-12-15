@@ -3,8 +3,10 @@
 import React, { memo } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const DocsRight = () => {
+  const pathname = usePathname()
   const tableOfContents: any[] = []
   const isActive = (section: any) => {
     return false

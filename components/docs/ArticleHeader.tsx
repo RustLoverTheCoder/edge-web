@@ -2,15 +2,12 @@
 
 import React, { memo } from 'react'
 import { usePathname } from 'next/navigation'
-
 import { DocsNavigation } from 'config'
 
 const ArticleHeader = () => {
   const pathname = usePathname()
-  const allLinks = DocsNavigation.flatMap((section) => section.links)
   const section = DocsNavigation.find((section) => section.links.find((link) => link.href === pathname))
-  const title = 'Introduction'
-  const tableOfContents: any[] = []
+  const title = section?.links.find((link) => link.href === pathname)?.title
 
   return title || section ? (
     <header className="mb-9 space-y-1">
