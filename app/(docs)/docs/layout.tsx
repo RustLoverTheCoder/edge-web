@@ -1,19 +1,8 @@
-'use client'
-
-import Link from 'next/link'
-import { Navigation, Prose } from 'components/docs'
+import { Navigation, Prose, ArticleHeader, DocsRight } from 'components/docs'
 import { Header } from 'components/pricing'
 import { DocsNavigation } from 'config'
-import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
-  const allLinks = DocsNavigation.flatMap((section) => section.links)
-  const section = DocsNavigation.find((section) => section.links.find((link) => link.href === pathname))
-  const title = 'Introduction'
-  const tableOfContents: any[] = []
-
   return (
     <>
       <Header />
@@ -28,12 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
         <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
           <article>
-            {(title || section) && (
-              <header className="mb-9 space-y-1">
-                {section && <p className="font-display text-sm font-medium text-sky-500">{section.title}</p>}
-                {title && <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">{title}</h1>}
-              </header>
-            )}
+            <ArticleHeader />
             <Prose>{children}</Prose>
           </article>
           {/* <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
@@ -67,39 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             )}
           </dl> */}
         </div>
-        {/* <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
-          <nav aria-labelledby="on-this-page-title" className="w-56">
-            {tableOfContents.length > 0 && (
-              <>
-                <h2 id="on-this-page-title" className="font-display text-sm font-medium text-slate-900 dark:text-white">
-                  On this page
-                </h2>
-                <ul className="mt-4 space-y-3 text-sm">
-                  {tableOfContents.map((section) => (
-                    <li key={section.id}>
-                      <h3>
-                        <Link href={`#${section.id}`}>
-                          <a className={clsx(isActive(section) ? 'text-sky-500' : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300')}>{section.title}</a>
-                        </Link>
-                      </h3>
-                      {section.children.length > 0 && (
-                        <ul className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400">
-                          {section.children.map((subSection) => (
-                            <li key={subSection.id}>
-                              <Link href={`#${subSection.id}`}>
-                                <a className={isActive(subSection) ? 'text-sky-500' : 'hover:text-slate-600 dark:hover:text-slate-300'}>{subSection.title}</a>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
-          </nav>
-        </div> */}
+        <DocsRight />
       </div>
     </>
   )
