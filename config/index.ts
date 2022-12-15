@@ -8,7 +8,7 @@ export const DocsNavigation = [
   {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/docs' },
+      { title: 'Getting started', href: '/docs/getting-started' },
       { title: 'Installation', href: '/docs/installation' },
     ],
   },

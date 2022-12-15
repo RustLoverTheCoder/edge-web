@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const section = DocsNavigation.find((section) => section.links.find((link) => link.href === pathname))
   const title = 'Introduction'
   const tableOfContents: any[] = []
-  
+
   return (
     <>
       <Header />
