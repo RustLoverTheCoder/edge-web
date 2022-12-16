@@ -16,7 +16,7 @@ function generateID(children, attributes) {
     .toLowerCase()
 }
 
-const rawText = readFileSync(path.join('pages/api/docs/installation.md'), 'utf-8')
+const rawText = readFileSync(path.join('pages/api/docs/getting-started.md'), 'utf-8')
 const ast = Markdoc.parse(rawText)
 
 type Data = {
