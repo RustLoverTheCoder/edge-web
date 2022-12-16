@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Markdoc from '@markdoc/markdoc'
 import { Callout } from './helpers'
+import { Fence } from './Fence'
 
 const Content = () => {
   const [content, setContent] = useState(null)
@@ -17,6 +18,7 @@ const Content = () => {
 
   const components = {
     Callout,
+    Fence,
   }
 
   return Markdoc.renderers.react(content, React, { components })

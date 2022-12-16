@@ -47,6 +47,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
           return base
         },
       },
+      fence: {
+        render: 'Fence',
+        attributes: {
+          language: {
+            type: String,
+          },
+        },
+      },
     },
     variables: {},
   }
