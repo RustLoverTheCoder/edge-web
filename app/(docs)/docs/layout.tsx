@@ -1,5 +1,5 @@
 import { Navigation, Prose, ArticleHeader, DocsRight } from 'components/docs'
-import { Header } from 'components/pricing'
+// import { Header } from 'components/pricing'
 import { DocsNavigation } from 'config'
 import './prism.css'
 
