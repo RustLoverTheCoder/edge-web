@@ -32,7 +32,7 @@ const DocsRight = () => {
                     </h3>
                     {section.children.length > 0 && (
                       <ul className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400">
-                        {section.children.map((subSection) => (
+                        {section.children.map((subSection: any) => (
                           <li key={subSection.id}>
                             <Link href={`#${subSection.id}`}>
                               <a className={isActive(subSection) ? 'text-sky-500' : 'hover:text-slate-600 dark:hover:text-slate-300'}>{subSection.title}</a>

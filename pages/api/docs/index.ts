@@ -4,12 +4,12 @@ import Markdoc from '@markdoc/markdoc'
 import path from 'path'
 const { nodes } = require('@markdoc/markdoc')
 
-function generateID(children, attributes) {
+function generateID(children: any, attributes: any) {
   if (attributes.id && typeof attributes.id === 'string') {
     return attributes.id
   }
   return children
-    .filter((child) => typeof child === 'string')
+    .filter((child: any) => typeof child === 'string')
     .join(' ')
     .replace(/[?]/g, '')
     .replace(/\s+/g, '-')
@@ -41,7 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     nodes: {
       heading: {
         ...nodes.heading,
-        transform(node, config) {
+        transform(node: any, config: any) {
           const base = nodes.heading.transform(node, config)
           base.attributes.id = generateID(base.children, base.attributes)
           return base
@@ -58,6 +58,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     },
     variables: {},
   }
-  const content = Markdoc.transform(ast, config)
+  const content: any = Markdoc.transform(ast, config)
   res.status(200).json(content)
 }

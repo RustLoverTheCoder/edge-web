@@ -14,7 +14,7 @@ const TYPE_MAP = {
   },
 }
 
-export function Callout({ children, type, title }) {
+export function Callout({ children, type, title }: any) {
   return (
     <div className="callout">
       <h3>{title}</h3>

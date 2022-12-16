@@ -82,7 +82,7 @@ const Pricing = () => {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    {section.features.map((feature) => (
+                    {section.features.map((feature: any) => (
                       <tr key={feature.name} className="border-t border-gray-200">
                         <th className="py-5 px-4 text-left text-sm font-normal text-gray-500" scope="row">
                           {feature.name}
@@ -163,7 +163,7 @@ const Pricing = () => {
                       {section.name}
                     </th>
                   </tr>
-                  {section.features.map((feature) => (
+                  {section.features.map((feature: any) => (
                     <tr key={feature.name}>
                       <th className="py-5 px-6 text-left text-sm font-normal text-gray-500" scope="row">
                         {feature.name}

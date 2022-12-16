@@ -5,7 +5,7 @@ import Markdoc from '@markdoc/markdoc'
 import { Callout } from './helpers'
 import { Fence } from './Fence'
 
-const Content = () => {
+const Content: any = () => {
   const [content, setContent] = useState(null)
   const init = async () => {
     const response = await fetch('/api/docs')
