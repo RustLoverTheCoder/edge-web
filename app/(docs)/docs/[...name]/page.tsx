@@ -1,7 +1,5 @@
-// import { usePathname } from 'next/navigation'
 import React from 'react'
 import { DocsNavigation } from 'config'
-import {} from 'next'
 import { Content } from 'components/docs'
 
 export async function generateStaticParams() {
