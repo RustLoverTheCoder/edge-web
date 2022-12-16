@@ -20,36 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ArticleHeader />
             <Prose>{children}</Prose>
           </article>
-          {/* <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
-            {previousPage && (
-              <div>
-                <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
-                  Previous
-                </dt>
-                <dd className="mt-1">
-                  <Link href={previousPage.href}>
-                    <a className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300">
-                      &larr; {previousPage.title}
-                    </a>
-                  </Link>
-                </dd>
-              </div>
-            )}
-            {nextPage && (
-              <div className="ml-auto text-right">
-                <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
-                  Next
-                </dt>
-                <dd className="mt-1">
-                  <Link href={nextPage.href}>
-                    <a className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300">
-                      {nextPage.title} &rarr;
-                    </a>
-                  </Link>
-                </dd>
-              </div>
-            )}
-          </dl> */}
         </div>
         <DocsRight />
       </div>
